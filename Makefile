@@ -1,6 +1,7 @@
 install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
+	conda install -c conda-forge pyspark
 
 test:
 	python -m pytest -vv test_hello.py
