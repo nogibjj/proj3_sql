@@ -4,3 +4,4 @@ numpy
 pandas
 pyspark
 pyarrow
+mysql-connector-python
