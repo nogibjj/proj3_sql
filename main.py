@@ -1,8 +1,9 @@
-
 import os
 from google.cloud import bigquery
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "/Users/kristivanmeter/Downloads/proj3-gc-clientcred-key.json"
+os.environ[
+    "GOOGLE_APPLICATION_CREDENTIALS"
+] = "/Users/kristivanmeter/Downloads/proj3-gc-clientcred-key.json"
 
 client = bigquery.Client()
 
@@ -18,7 +19,6 @@ ORDER BY Total DESC
 
 query_job = client.query(sql_query)
 
-# access SQL query using REST API
-
-# GET https://bigquery.googleapis.com/bigquery/v2/projects/proj3-368706/queries/Middle_countries 
-
+# to print out results
+# for row in query_job.result():
+#     print(row)
